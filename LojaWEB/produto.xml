@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<java version="1.8.0_141" class="java.beans.XMLDecoder">
+ <object class="java.util.ArrayList">
+  <void method="add">
+   <object class="modelo.Produto">
+    <void property="nome">
+     <string>calça</string>
+    </void>
+    <void property="preco">
+     <double>100.0</double>
+    </void>
+    <void property="qtdestoque">
+     <int>50</int>
+    </void>
+   </object>
+  </void>
+ </object>
+</java>
