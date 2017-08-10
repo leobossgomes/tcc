@@ -3,8 +3,11 @@
  <object class="java.util.ArrayList">
   <void method="add">
    <object class="modelo.Produto">
+    <void property="imagem">
+     <string>http://static1.netshoes.net/Produtos/caneleira-nike-j-guard/42/004-0040-042/004-0040-042_detalhe1.jpg?resize=254:*</string>
+    </void>
     <void property="nome">
-     <string>calça</string>
+     <string>caneleira</string>
     </void>
     <void property="preco">
      <double>100.0</double>

@@ -16,7 +16,7 @@ public class ProdutoDAO {
         ArrayList<Produto> produtos = new ArrayList();
         try {
             //FileInputStream fis = new FileInputStream("F:\\LojaWEB\\produto.xml");
-            FileInputStream fis = new FileInputStream("/run/media/informatica/F851-676F/LojaWEB/produto.xml");
+            FileInputStream fis = new FileInputStream("/local/home/informatica/tcc/LojaWEB/produto.xml");
             BufferedInputStream bis = new BufferedInputStream(fis);
             XMLDecoder xmldec = new XMLDecoder(bis);
             produtos = (ArrayList<Produto>) xmldec.readObject();
@@ -42,7 +42,7 @@ public class ProdutoDAO {
     public boolean salvaListaDeProdutos(ArrayList<Produto> produtos) {
         try {
             //FileOutputStream fout = new FileOutputStream("F:\\LojaWEB\\produto.xml");
-            FileOutputStream fout = new FileOutputStream("/run/media/informatica/F851-676F/LojaWEB/produto.xml");
+            FileOutputStream fout = new FileOutputStream("/local/home/informatica/tcc/LojaWEB/produto.xml");
             BufferedOutputStream bos = new BufferedOutputStream(fout);
             XMLEncoder xmlenc = new XMLEncoder(bos);
             xmlenc.writeObject(produtos);
