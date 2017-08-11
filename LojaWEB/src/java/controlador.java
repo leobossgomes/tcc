@@ -88,7 +88,7 @@ public class controlador extends HttpServlet {
                 w.setPreco(Double.valueOf(preco));
                 String quantidade = request.getParameter("qtdestoque");
                 w.setQtdestoque(Integer.parseInt(quantidade));
-                String imagem = request.getParameter("imagem");
+                String imagem = request.getParameter("url");
                 w.setImagem(imagem);
                 int codigo = Integer.parseInt(request.getParameter("codigo"));
                 p.removeProduto(codigo);
