@@ -11,55 +11,56 @@
         <title>Gerencia de Produtos</title>
     </head>
     <p class="w3-opacity "><i>Gerenciamento de Produtos</i></p>
-  
-        
-        <a href="CadastroProduto.jsp">Incluir um Produto</a>
-        <hr>
-        <table id="keywords" cellspacing="3px" cellpadding="0">
-            <thead>
-                <tr>
-                    <th><span>Codigo</span></th>
-                    <th><span>Nome</span></th>
-                    <th><span>Preco</span></th>
-                    <th><span>Quantidade</span></th>   
-                    <th><span>Operações</span></th>
-                </tr>
-            </thead>
-            <tbody>
 
-                <%
-                    HttpSession ses = request.getSession(true);
 
-                    Produto pr = (Produto) ses.getAttribute("Produto");
-                    if (pr == null) {
-                        pr = new Produto();
-                        ProdutoDAO pd = new ProdutoDAO();
-                        // pr.setProduto(pd.carregaListaDeProduto());
+    <a href="CadastroProduto.jsp">Incluir um Produto</a>
+    <hr>
+    <table id="keywords" cellspacing="3px" cellpadding="0">
+        <thead>
+            <tr>
+                <th><span>Codigo</span></th>
+                <th><span>Nome</span></th>
+                <th><span>Preco</span></th>
+                <th><span>Quantidade</span></th>   
+                <th><span>Operações</span></th>
+            </tr>
+        </thead>
+        <tbody>
 
-                        ArrayList<Produto> produtos = pd.carregaListaDeProduto();
-                        //ses.setAttribute("Produto", pr);
+            <%
+                HttpSession ses = request.getSession(true);
 
-                        for (Produto p : produtos) {
-                %>
+                Produto pr = (Produto) ses.getAttribute("Produto");
+                if (pr == null) {
+                    pr = new Produto();
+                    ProdutoDAO pd = new ProdutoDAO();
+                    // pr.setProduto(pd.carregaListaDeProduto());
 
-                <tr id="tabela">
-                    <td class=center><%=p.getCodigo()%></td>
-                    <td class=center><%=p.getNome()%></td> 
-                    <td class=center><%=p.getPreco()%></td>
-                    <td class=center><%=p.getQtdestoque()%></td>
+                    ArrayList<Produto> produtos = pd.carregaListaDeProduto();
+                    //ses.setAttribute("Produto", pr);
 
-                    <td>
-                        <a href="controlador?operacao=formEdita&codigo=<%=p.getCodigo()%>">Editar</a>
-                        <a href="controlador?operacao=exclui&codigo=<%=p.getCodigo()%>">Excluir</a>
-                    </td>
+                    for (Produto p : produtos) {
+            %>
 
-                </tr>
+            <tr id="tabela">
+                <td class=center><%=p.getCodigo()%></td>
+                <td class=center><%=p.getNome()%></td> 
+                <td class=center><%=p.getPreco()%></td>
+                <td class=center><%=p.getQtdestoque()%></td>
 
-                <%
-                        }
+                <td>
+                    <a href="controlador?operacao=formEdita&codigo=<%=p.getCodigo()%>">Editar</a>
+                    <a href="controlador?operacao=exclui&codigo=<%=p.getCodigo()%>">Excluir</a>
+                </td>
+
+            </tr>
+
+            <%
                     }
-                %>
-            </tbody>
-        </table>    
-    </form>
+                }
+            %>
+        </tbody>
+    </table>  
+    <div> <a href="SiteWEB.jsp">Voltar ao Site</a></td></div>
+</form>
 </html>
