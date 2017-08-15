@@ -140,7 +140,7 @@
     </div>
     <!-- Seção de Vôleibol -->
     <div class="w3-black w3-container w3-content w3-center w3-padding-64" style="max-width:100%" id="vol">
-        <h2 class="w3-wide">Voleibol</h1>
+        <h1 class="w3-wide">Voleibol</h1>
             <p class="w3-opacity"><i></i></p>
             <p class="w3-justify">Esses são alguns desse departamento:</p><div class="w3-row w3-padding-32">
                 <div class="w3-third">
