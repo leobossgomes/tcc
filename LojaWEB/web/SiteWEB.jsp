@@ -181,7 +181,7 @@
     <!-- Seção de Produtos em Alta -->
     <div class="w3-black" id="emalta">
         <div class="w3-container w3-center w3-content w3-padding-64" style="max-width" id="alta">
-            <h2 class="w3-wide">Em Alta!</h1>
+            <h2 class="w3-wide">Em Alta!</h2>
                 <p class="w3-opacity w3-center"><i>SE LIGA NESSES PRODUTOS !</i></p><br>
 
                 <div class="w3-row-padding w3-padding-32" style="margin:0 -16px">
