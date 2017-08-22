@@ -1,22 +1,39 @@
-
-
 <%@page import="java.util.ArrayList"%>
 <%@page import="dao.ProdutoDAO"%>
 <%@page import="modelo.Produto"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/3/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 <!DOCTYPE html>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Gerencia de Produtos</title>
+        <style>
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: center;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+</style>
     </head>
-    <p class="w3-opacity "><i>Gerenciamento de Produtos</i></p>
-
-
-    <a href="CadastroProduto.jsp">Incluir um Produto</a>
-    <hr>
-    <table id="keywords" cellspacing="3px" cellpadding="0">
+     <h1 class="w3-wide w3-center w3-black">Gerencia de Produtos</h1>
+    <table id="keywords"  cellspacing="3px" cellpadding="0px">
+       
         <thead>
+            
             <tr>
                 <th><span>Codigo</span></th>
                 <th><span>Nome</span></th>
@@ -49,8 +66,8 @@
                 <td class=center><%=p.getQtdestoque()%></td>
 
                 <td>
-                    <a href="controlador?operacao=formEdita&codigo=<%=p.getCodigo()%>">Editar</a>
-                    <a href="controlador?operacao=exclui&codigo=<%=p.getCodigo()%>">Excluir</a>
+                    <a class="w3-button w3-black w3-section w3-center " href="controlador?operacao=formEdita&codigo=<%=p.getCodigo()%>">Editar</a>
+                    <a class="w3-button w3-black w3-section w3-center " href="controlador?operacao=exclui&codigo=<%=p.getCodigo()%>">Excluir</a>
                 </td>
 
             </tr>
@@ -60,7 +77,11 @@
                 }
             %>
         </tbody>
-    </table>  
-    <div> <a href="SiteWEB.jsp">Voltar ao Site</a></td></div>
+    </table> 
+   
+        <div> 
+     <a  <button  class="w3-button w3-black w3-section w3-center "href="CadastroProduto.jsp" type="submit" value="Editar"> Incluir um Produto</a></button>
+    <a  <button  class="w3-button w3-black w3-section w3-center "href="SiteWEB.jsp" type="submit" value="Editar"> Voltar ao Site</a></button>
+    </div>
 </form>
 </html>
