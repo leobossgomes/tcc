@@ -4,8 +4,11 @@
     Author     : informatica
 --%>
 
-<%@page import="modelo.Produto"%>
+<%@page import="modelo.ProdutoDTO"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/3/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <!DOCTYPE html>
 <html>
     <head>
@@ -18,7 +21,7 @@
              <div class="w3-row-padding " style="margin:125px 160px 0px 160px">
                 <form action="controlador" method="get"> 
             <%
-                Produto p = (Produto) request.getAttribute("p");
+                ProdutoDTO p = (ProdutoDTO) request.getAttribute("p");
                 // 3.2 mostra os campos do livro, preenchendo-os com os valores do livro atual
 %>
 

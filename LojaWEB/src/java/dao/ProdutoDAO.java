@@ -8,28 +8,28 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import static java.lang.System.out;
 import java.util.ArrayList;
-import modelo.Produto;
+import modelo.ProdutoDTO;
 
 public class ProdutoDAO {
 
-    public ArrayList<Produto> carregaListaDeProduto() {
-        ArrayList<Produto> produtos = new ArrayList();
+    public ArrayList<ProdutoDTO> carregaListaDeProduto() {
+        ArrayList<ProdutoDTO> produtos = new ArrayList();
         try {
-            //FileInputStream fis = new FileInputStream("F:\\LojaWEB\\produto.xml");
-            FileInputStream fis = new FileInputStream("/local/home/informatica/tcc/LojaWEB/produto.xml");
+            FileInputStream fis = new FileInputStream("/local/home/informatica/Downloads/LojaWEB/produto.xml");
+            //FileInputStream fis = new FileInputStream("/local/home/informatica/tcc/LojaWEB/produto.xml");
             BufferedInputStream bis = new BufferedInputStream(fis);
             XMLDecoder xmldec = new XMLDecoder(bis);
-            produtos = (ArrayList<Produto>) xmldec.readObject();
+            produtos = (ArrayList<ProdutoDTO>) xmldec.readObject();
         } catch (Exception ex) {
             System.out.println("ERRO: " + ex.getMessage());
         }
         return produtos;
     }
 
-    public boolean insereProduto(Produto item) {
-        ArrayList<Produto> produtos = carregaListaDeProduto();
+    public boolean insereProduto(ProdutoDTO item) {
+        ArrayList<ProdutoDTO> produtos = carregaListaDeProduto();
         int maior = -1;
-        for (Produto produto : produtos) {
+        for (ProdutoDTO produto : produtos) {
             if (produto.getCodigo() > maior) {
                 maior = produto.getCodigo();
             }
@@ -39,10 +39,10 @@ public class ProdutoDAO {
         return salvaListaDeProdutos(produtos);
     }
 
-    public boolean salvaListaDeProdutos(ArrayList<Produto> produtos) {
+    public boolean salvaListaDeProdutos(ArrayList<ProdutoDTO> produtos) {
         try {
-            //FileOutputStream fout = new FileOutputStream("F:\\LojaWEB\\produto.xml");
-            FileOutputStream fout = new FileOutputStream("/local/home/informatica/tcc/LojaWEB/produto.xml");
+            FileOutputStream fout = new FileOutputStream("/local/home/informatica/Downloads/LojaWEB/produto.xml");
+            //FileOutputStream fout = new FileOutputStream("/local/home/informatica/tcc/LojaWEB/produto.xml");
             BufferedOutputStream bos = new BufferedOutputStream(fout);
             XMLEncoder xmlenc = new XMLEncoder(bos);
             xmlenc.writeObject(produtos);
@@ -54,17 +54,17 @@ public class ProdutoDAO {
         }
     }
 
-    public void cadastraProduto(Produto p) {
+    public void cadastraProduto(ProdutoDTO p) {
         insereProduto(p);
 
     }
     
 
-    public Produto carregaProdutoComId(String id) {        
-        ArrayList<Produto> produtos = carregaListaDeProduto();
+    public ProdutoDTO carregaProdutoComId(String id) {        
+        ArrayList<ProdutoDTO> produtos = carregaListaDeProduto();
         int codigo = Integer.parseInt(id);
 
-        for (Produto p : produtos) {
+        for (ProdutoDTO p : produtos) {
 
             if (p.getCodigo() == codigo) {
      
@@ -78,9 +78,9 @@ public class ProdutoDAO {
 
     public void removeProduto(int codigo) {
 
-        ArrayList<Produto> produtos = carregaListaDeProduto();
+        ArrayList<ProdutoDTO> produtos = carregaListaDeProduto();
 
-        for (Produto p : produtos) {
+        for (ProdutoDTO p : produtos) {
 
             if (p.getCodigo() == codigo) {
                 // Encontrou uma pessoa cadastrada com nome "Pedro".

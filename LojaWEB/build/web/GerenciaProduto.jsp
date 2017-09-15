@@ -1,6 +1,6 @@
 <%@page import="java.util.ArrayList"%>
 <%@page import="dao.ProdutoDAO"%>
-<%@page import="modelo.Produto"%>
+<%@page import="modelo.ProdutoDTO"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/3/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
@@ -47,16 +47,16 @@ tr:nth-child(even) {
             <%
                 HttpSession ses = request.getSession(true);
 
-                Produto pr = (Produto) ses.getAttribute("Produto");
+                ProdutoDTO pr = (ProdutoDTO) ses.getAttribute("Produto");
                 if (pr == null) {
-                    pr = new Produto();
+                    pr = new ProdutoDTO();
                     ProdutoDAO pd = new ProdutoDAO();
                     // pr.setProduto(pd.carregaListaDeProduto());
 
-                    ArrayList<Produto> produtos = pd.carregaListaDeProduto();
+                    ArrayList<ProdutoDTO> produtos = pd.carregaListaDeProduto();
                     //ses.setAttribute("Produto", pr);
 
-                    for (Produto p : produtos) {
+                    for (ProdutoDTO p : produtos) {
             %>
 
             <tr id="tabela">

@@ -1,6 +1,6 @@
 package modelo;
 
-public class Promo extends Produto {
+public class Promo extends ProdutoDTO {
 
     double desconto;  // por exemplo, pra promoção de 10%, desconto = 0.90  
 

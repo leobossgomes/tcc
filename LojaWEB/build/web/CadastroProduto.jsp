@@ -1,7 +1,5 @@
-
-
 <%@page import="dao.ProdutoDAO"%>
-<%@page import="modelo.Produto"%>
+<%@page import="modelo.ProdutoDTO"%>
 <%@page import="java.util.Scanner"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/3/w3.css">

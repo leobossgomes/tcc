@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<java version="1.8.0_121" class="java.beans.XMLDecoder">
+ <object class="java.util.ArrayList">
+  <void method="add">
+   <object class="modelo.UsuarioDTO">
+    <void property="email">
+     <string>gasgasgsa</string>
+    </void>
+    <void property="senha">
+     <string>agsagag</string>
+    </void>
+    <void property="usuario">
+     <string>dasgagsa</string>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="modelo.UsuarioDTO">
+    <void property="codigo">
+     <int>1</int>
+    </void>
+    <void property="email">
+     <string>leobossnaogomes</string>
+    </void>
+    <void property="senha">
+     <string>vcxvxc</string>
+    </void>
+    <void property="usuario">
+     <string>boss</string>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="modelo.UsuarioDTO">
+    <void property="codigo">
+     <int>2</int>
+    </void>
+    <void property="email">
+     <string>jose</string>
+    </void>
+    <void property="senha">
+     <string>123456</string>
+    </void>
+    <void property="usuario">
+     <string>jose</string>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="modelo.UsuarioDTO">
+    <void property="codigo">
+     <int>3</int>
+    </void>
+    <void property="email">
+     <string>admin</string>
+    </void>
+    <void property="senha">
+     <string>123</string>
+    </void>
+    <void property="usuario">
+     <string>admin</string>
+    </void>
+   </object>
+  </void>
+ </object>
+</java>

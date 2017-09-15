@@ -1,54 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<java version="1.8.0_141" class="java.beans.XMLDecoder">
+<java version="1.8.0_144" class="java.beans.XMLDecoder">
  <object class="java.util.ArrayList">
   <void method="add">
-   <object class="modelo.Produto">
-    <void property="nome">
-     <string>bola</string>
-    </void>
-    <void property="preco">
-     <double>50.0</double>
-    </void>
-    <void property="qtdestoque">
-     <int>10</int>
-    </void>
-   </object>
-  </void>
-  <void method="add">
-   <object class="modelo.Produto">
+   <object class="modelo.ProdutoDTO">
     <void property="codigo">
      <int>1</int>
     </void>
     <void property="imagem">
-     <string>https://i3.zst.com.br/images/chuteira-campo-adidas-f10-trx-fg-adulto-photo179606702-45-21-3c.jpg</string>
+     <string>432</string>
     </void>
     <void property="nome">
-     <string>chuteira</string>
+     <string>v</string>
     </void>
     <void property="preco">
-     <double>100.0</double>
+     <double>342.0</double>
     </void>
     <void property="qtdestoque">
-     <int>50</int>
-    </void>
-   </object>
-  </void>
-  <void method="add">
-   <object class="modelo.Produto">
-    <void property="codigo">
-     <int>2</int>
-    </void>
-    <void property="imagem">
-     <string>4</string>
-    </void>
-    <void property="nome">
-     <string>1</string>
-    </void>
-    <void property="preco">
-     <double>2.0</double>
-    </void>
-    <void property="qtdestoque">
-     <int>3</int>
+     <int>432</int>
     </void>
    </object>
   </void>
